@@ -10,10 +10,10 @@ class HomePage extends StatelessWidget {
         title: const Text('Flutter Mapp'),
       ),
       body: Column(
-        children: const [
+        children: [
           Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Text('data'),
+            padding: const EdgeInsets.all(8.0),
+            child: Image.asset("images/rocket.png"),
           ),
         ],
       ),
