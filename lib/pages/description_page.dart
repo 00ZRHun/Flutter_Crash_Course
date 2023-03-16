@@ -20,12 +20,13 @@ class _DescriptionPageState extends State<DescriptionPage> {
         // title: const Text('Description Page'),
         title: Text(widget.box.title),
         // automaticallyImplyLeading: false,
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: const Icon(Icons.dangerous),
-        ),
+        // leading: IconButton(
+        //   onPressed: () {
+        //     Navigator.pop(context);
+        //   },
+        //   icon: const Icon(Icons.dangerous),
+        // ),
+        // backgroundColor: Colors.red,
         actions: [
           IconButton(
               onPressed: () => {
