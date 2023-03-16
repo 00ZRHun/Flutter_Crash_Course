@@ -22,9 +22,9 @@ class CardWidget extends StatelessWidget {
           children: [
             const SizedBox(height: kDouble5),
             Image.asset(imagePath),
-            const Text(
-              'Title',
-              style: TextStyle(
+            Text(
+              title,
+              style: const TextStyle(
                 fontSize: kDouble20,
                 fontWeight: FontWeight.bold,
               ),
