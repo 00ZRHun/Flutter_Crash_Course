@@ -2,9 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_youtube/class/item_class.dart';
 import 'package:flutter_youtube/core/constant.dart';
 
-class DescriptionPage extends StatelessWidget {
+class DescriptionPage extends StatefulWidget {
   const DescriptionPage({super.key, required this.box});
   final ItemClass box;
+
+  @override
+  State<DescriptionPage> createState() => _DescriptionPageState();
+}
+
+class _DescriptionPageState extends State<DescriptionPage> {
+  double fontSizeCustom = 25;
 
   @override
   Widget build(BuildContext context) {
@@ -12,39 +19,55 @@ class DescriptionPage extends StatelessWidget {
       appBar: AppBar(
         // title: const Text('Description Page'),
         // automaticallyImplyLeading: false,
-        title: Text(box.title),
+        title: Text(widget.box.title),
       ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(kDouble10),
           child: Column(
             children: [
-              Image.asset(box.imagePath),
+              Image.asset(widget.box.imagePath),
               Wrap(
                 spacing: kDouble10,
                 children: [
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        fontSizeCustom = 25;
+                      });
+                    },
                     child: const Text("Small Title"),
                   ),
                   OutlinedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        fontSizeCustom = 35;
+                      });
+                    },
                     child: const Text("Medium Title"),
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        fontSizeCustom = 50;
+                      });
+                    },
                     child: const Text("Large Title"),
                   ),
                   FilledButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        fontSizeCustom = 200;
+                      });
+                    },
                     child: const Text("Huge Title"),
                   ),
                 ],
               ),
               FittedBox(
-                child: Text(box.title,
-                    style: const TextStyle(
-                      fontSize: 200,
+                child: Text(widget.box.title,
+                    style: TextStyle(
+                      fontSize: fontSizeCustom,
                       fontWeight: FontWeight.bold,
                     )),
               ),
