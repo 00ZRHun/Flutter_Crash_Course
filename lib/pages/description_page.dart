@@ -20,6 +20,20 @@ class _DescriptionPageState extends State<DescriptionPage> {
         // title: const Text('Description Page'),
         // automaticallyImplyLeading: false,
         title: Text(widget.box.title),
+        actions: [
+          IconButton(
+              onPressed: () => {
+                    // const SnackBar(
+                    //
+                    // )
+                    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                      content: Text("SnackBar"),
+                      behavior: SnackBarBehavior.floating,
+                      // duration: Duration(seconds: 4),   // default value
+                    ))
+                  },
+              icon: const Icon(Icons.info))
+        ],
       ),
       body: SingleChildScrollView(
         child: Padding(
