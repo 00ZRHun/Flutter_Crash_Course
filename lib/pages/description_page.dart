@@ -21,6 +21,7 @@ class DescriptionPage extends StatelessWidget {
             children: [
               Image.asset(box.imagePath),
               Wrap(
+                spacing: kDouble10,
                 children: [
                   TextButton(
                     onPressed: () {},
