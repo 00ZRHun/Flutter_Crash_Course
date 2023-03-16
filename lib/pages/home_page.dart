@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_youtube/class/item_class.dart';
 import 'package:flutter_youtube/widget/card_widget.dart';
 
 class HomePage extends StatelessWidget {
@@ -13,30 +14,34 @@ class HomePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const CardWidget(
+            CardWidget(
+                box: ItemClass(
               title: 'Rocket',
               imagePath: 'images/rocket.png',
-            ),
+            )),
             Row(
-              children: const [
+              children: [
                 Expanded(
                   child: CardWidget(
-                    title: 'Rocket',
+                      box: ItemClass(
+                    title: 'Travel',
                     imagePath: 'images/travel.png',
-                  ),
+                  )),
                 ),
                 Expanded(
                   child: CardWidget(
-                    title: 'Rocket',
+                      box: ItemClass(
+                    title: 'Space',
                     imagePath: 'images/space.png',
-                  ),
+                  )),
                 ),
               ],
             ),
-            const CardWidget(
-              title: 'Rocket',
+            CardWidget(
+                box: ItemClass(
+              title: 'Yeah',
               imagePath: 'images/yeah.png',
-            ),
+            )),
           ],
         ),
       ),
