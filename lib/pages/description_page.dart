@@ -23,9 +23,6 @@ class _DescriptionPageState extends State<DescriptionPage> {
         actions: [
           IconButton(
               onPressed: () => {
-                    // const SnackBar(
-                    //
-                    // )
                     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                       content: Text("SnackBar"),
                       behavior: SnackBarBehavior.floating,
