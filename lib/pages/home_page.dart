@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-//import '../core/constant.dart';
-import 'package:flutter_youtube/core/constant.dart';
+import 'package:flutter_youtube/core/constant.dart'; // OPT: '../core/constant.dart'
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -21,21 +20,17 @@ class HomePage extends StatelessWidget {
                 width: double.infinity,
                 child: Column(
                   children: [
-                    const SizedBox(
-                      height: kDouble5,
-                    ),
+                    const SizedBox(height: kDouble5),
                     Image.asset("images/rocket.png"),
                     const Text(
-                      'Wen Jing',
+                      'Title',
                       style: TextStyle(
                         fontSize: kDouble20,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     const Text('Description'),
-                    const SizedBox(
-                      height: kDouble10,
-                    )
+                    const SizedBox(height: kDouble10)
                   ],
                 ),
               ),
