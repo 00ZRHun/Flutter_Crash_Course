@@ -18,8 +18,14 @@ class _DescriptionPageState extends State<DescriptionPage> {
     return Scaffold(
       appBar: AppBar(
         // title: const Text('Description Page'),
-        // automaticallyImplyLeading: false,
         title: Text(widget.box.title),
+        // automaticallyImplyLeading: false,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(Icons.dangerous),
+        ),
         actions: [
           IconButton(
               onPressed: () => {
