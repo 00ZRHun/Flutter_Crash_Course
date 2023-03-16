@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+//import '../core/constant.dart';
+import 'package:flutter_youtube/core/constant.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -14,25 +16,25 @@ class HomePage extends StatelessWidget {
           children: [
             Card(
               child: Container(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(kDouble10),
                 // color: Colors.red,
                 width: double.infinity,
                 child: Column(
                   children: [
                     const SizedBox(
-                      height: 5,
+                      height: kDouble5,
                     ),
                     Image.asset("images/rocket.png"),
                     const Text(
-                      'Title',
+                      'Wen Jing',
                       style: TextStyle(
-                        fontSize: 22,
+                        fontSize: kDouble20,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     const Text('Description'),
                     const SizedBox(
-                      height: 10,
+                      height: kDouble10,
                     )
                   ],
                 ),
