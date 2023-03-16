@@ -20,6 +20,26 @@ class DescriptionPage extends StatelessWidget {
           child: Column(
             children: [
               Image.asset(box.imagePath),
+              Wrap(
+                children: [
+                  TextButton(
+                    onPressed: () {},
+                    child: const Text("Small Title"),
+                  ),
+                  OutlinedButton(
+                    onPressed: () {},
+                    child: const Text("Medium Title"),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: const Text("Large Title"),
+                  ),
+                  FilledButton(
+                    onPressed: () {},
+                    child: const Text("Huge Title"),
+                  ),
+                ],
+              ),
               FittedBox(
                 child: Text(box.title,
                     style: const TextStyle(
