@@ -27,7 +27,7 @@ class CardWidget extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            const Text('This is a description'),
+            Text('This is the ${box.title} description'),
             const SizedBox(height: kDouble10)
           ],
         ),
