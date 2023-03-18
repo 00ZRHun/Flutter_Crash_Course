@@ -62,9 +62,9 @@ class _DescriptionPageState extends State<DescriptionPage> {
                         fontSizeCustom = 35;
                       });
                     },
-                    style: OutlinedButton.styleFrom(
+                    /* style: OutlinedButton.styleFrom(
                         backgroundColor: Colors.red,
-                        foregroundColor: Colors.white),
+                        foregroundColor: Colors.white), */
                     child: const Text("Medium Title"),
                   ),
                   ElevatedButton(
@@ -73,9 +73,9 @@ class _DescriptionPageState extends State<DescriptionPage> {
                         fontSizeCustom = 50;
                       });
                     },
-                    style: ElevatedButton.styleFrom(
+                    /* style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.red,
-                        foregroundColor: Colors.white),
+                        foregroundColor: Colors.white), */
                     child: const Text("Large Title"),
                   ),
                   FilledButton(
