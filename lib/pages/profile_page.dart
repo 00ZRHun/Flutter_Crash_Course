@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_youtube/core/constant.dart';
+import 'package:flutter_youtube/core/notifiers.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -34,8 +35,20 @@ class ProfilePage extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: const Icon(Icons.dark_mode),
+        onPressed: () {
+          isDarkNotifier.value = !isDarkNotifier.value;
+        },
+        //child: const Icon(Icons.dark_mode),
+        child: ValueListenableBuilder(
+          valueListenable: isDarkNotifier,
+          builder: (context, isDark, child) {
+            if (!isDark) {
+              return const Icon(Icons.dark_mode);
+            } else {
+              return const Icon(Icons.light_mode);
+            }
+          },
+        ),
       ),
     );
   }

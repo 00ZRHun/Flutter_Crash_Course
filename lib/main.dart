@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_youtube/core/notifiers.dart';
 import 'package:flutter_youtube/tree_widget.dart';
 
 void main() {
@@ -11,15 +12,21 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        brightness: Brightness.dark,
-        primarySwatch: Colors.blue,
-        useMaterial3: true,
-      ),
-      home: const TreeWidget(),
+    return ValueListenableBuilder(
+      valueListenable: isDarkNotifier,
+      builder: (context, isDark, child) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'Flutter Demo',
+          theme: ThemeData(
+            // brightness: Brightness.dark,
+            brightness: isDark ? Brightness.dark : Brightness.light,
+            primarySwatch: Colors.blue,
+            useMaterial3: true,
+          ),
+          home: const TreeWidget(),
+        );
+      },
     );
   }
 }
